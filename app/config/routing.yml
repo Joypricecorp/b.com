@@ -1,3 +1,6 @@
+logout:
+    path:   /logout
+
 hwi_oauth_redirect:
     resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
     prefix:   /connect
@@ -8,3 +11,6 @@ hwi_oauth_login:
 
 facebook_login:
     pattern: /login/check-facebook
+
+joyprice_login:
+    pattern: /login/check-joyprice

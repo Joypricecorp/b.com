@@ -79,6 +79,23 @@ hwi_oauth:
             paths:
                 email: email
                 nickname: email
+        joyprice:
+            type:                oauth2
+            client_id:           1
+            client_secret:       1f9ib5ggb4w08g4ogwsco8so4444ck0s840gk4okc4844cwc0s
+            access_token_url:    http://a.com/app_dev.php/oauth/v2/token
+            authorization_url:   http://a.com/app_dev.php/oauth/v2/auth
+            infos_url:           http://a.com/app_dev.php/api/v1/me
+            scope:               user info email birthday mobile tel
+            user_response_class: HWI\Bundle\OAuthBundle\OAuth\Response\PathUserResponse
+            paths:
+                identifier: firstname
+                nickname:   firstname
+                realname:   fullname
+            options:
+                # apply state param
+                # http://tools.ietf.org/html/rfc6749#section-4.1.1
+                csrf: true
 
 services:
     hwi_oauth.user.provider.entity:

@@ -37,14 +37,15 @@ security:
             #    realm: "Secured Demo Area"
 
         secured_area:
-            #anonymous: ~
+            anonymous: true
+            logout: ~
             oauth:
                 resource_owners:
                     facebook:           "/login/check-facebook"
+                    joyprice:           "/login/check-joyprice"
                 login_path:        /login
                 use_forward:       false
                 failure_path:      /login
-
                 oauth_user_provider:
                     service: hwi_oauth.user.provider.entity
 
